@@ -433,6 +433,7 @@ footer {
     letter-spacing: 0.09em;
     line-height: 87px;
     color: var(--white);
+    text-align: center;
     /* text-align: center; */
 }
 
@@ -480,6 +481,7 @@ footer {
 
 .content img {
     margin-bottom: 30px;
+    width: 100%;
 }
 
 /* sidebar */
@@ -525,16 +527,13 @@ footer {
 }
 
 /* ARTICLES PAGE */
-
-.box--articles {
-
-}
-
 .list--anchors {
     display: flex; 
     flex-direction: column;
     gap: 30px;
     align-items: start;
+    max-width: 1000px;
+   
 }
 
 .list--anchors li {
@@ -547,6 +546,8 @@ footer {
     color: var(--text-color);
     font-weight: 500;
     transition: 0.7s;
+    word-break: break-word;
+    
 }
 
 .box--articles {
@@ -597,6 +598,7 @@ color: var(--white);
     font-weight: 500;
     font-size: 20px;
 }
+
 
 .world, .russia:not(:first-child) {
     display: flex;
@@ -674,10 +676,12 @@ margin-bottom: 50px;
     max-width: 385px;
 }
 
+
+
+
 /* PROFILE PAGE */
 
-.profile {
-}
+
 .box-profile {
     display: flex;
     justify-content: center;
@@ -709,7 +713,7 @@ margin-bottom: 50px;
 
 .line {
     background-color: var(--text-color);
-    width: 300px;
+    max-width: 300px;
     height: 1px;
     margin-top: 3px;
 }
@@ -809,7 +813,32 @@ margin-bottom: 50px;
     margin-top: 20px;
 }
 
+
+/* login */
+.info--user {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.info--user p {
+    font-weight: 500;
+}
+
+.link--user {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+
+
 /* Медиа-запросы для адаптива */
+@media screen and (max-width: 1340px) {
+    .sidebar {
+        display: none;
+    }
+
+}
+
 @media screen and (max-width: 1024px) {
     .container {
         padding: 0 20px;
@@ -839,6 +868,16 @@ margin-bottom: 50px;
     .text--works {
         text-align: center;
     }
+
+    .item--world img, .item--russia img {
+    width: 100%;
+}
+    
+    
+.grid--history {
+    grid-template-columns: 1fr;
+    font-size: 16px;
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -869,6 +908,9 @@ margin-bottom: 50px;
         gap: 20px;
     }
     
+    .title--pages h2 {
+        font-size: 48px;
+    }
     
     
     form {
@@ -889,9 +931,45 @@ margin-bottom: 50px;
         gap: 30px;
         text-align: center;
     }
-    .sidebar {
+    .contact {
+        text-align: center;
+    }
+
+    .box--articles img {
         display: none;
     }
+
+    .list--anchors li a {
+        font-size: 22px;
+    }
+    .infoblock {
+        grid-template-columns: 1fr;
+    }
+    .title--intro {
+        font-size: 36px;
+    }
+
+    .item--world:nth-child(even) {
+    flex-direction: column-reverse; 
+    text-align: center;
+}
+
+.item--world:nth-child(odd) {
+    flex-direction: column-reverse;
+    text-align: center; 
+}
+
+
+.item--russia:nth-child(even) {
+    flex-direction: column-reverse; 
+    text-align: center;
+}
+
+.item--russia:nth-child(odd) {
+    flex-direction: column-reverse; 
+    text-align: center;
+}
+    
 }
 
 @media screen and (max-width: 480px) {
@@ -929,6 +1007,9 @@ margin-bottom: 50px;
     width: 250px;
 }
 
+    .title--pages h2 {
+        font-size: 36px;
+    }
 .btn--work a {
     font-size: 18px;
 
