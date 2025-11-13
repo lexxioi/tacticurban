@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТактикУрбан</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.svg">
+</head>
+<body>
+    <header>
+        <div class="logo--header">
+            <a href="index.html">
+                <img src="img/logo.svg" alt="логотип тактического урбанизма">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a class="link" href="history.html">История</a></li>
+                <li><a class="link" href="works.html">Проекты</a></li>
+                <li><a class="link" href="articles.html">Статьи</a></li>
+                <li><a class="btn--share" href="#share--form">Поделиться</a></li>
+                <li><a class="user-icon" href="register.html"><img src="img/icon_user.svg" alt="иконка пользователя"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="title--pages">
+            <h2>Ссылки на статьи</h2>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="box--articles">
+                    <ul class="list--anchors">
+                        <li><a href="https://www.sevsu.ru/novosti/item/3660-aleksej-komov-o-takticheskom-urbanizme-ego-osobennostyakh-v-krymu-i-v-monogorodakh-a-takzhe-o-vliyanii-takikh-proektov-na-ekonomiku/"><span class="accent">1.</span> https://www.sevsu.ru/novosti/item/3660-aleksej-komov-o-takticheskom-urbanizme-ego-osobennostyakh-v-krymu-i-v-monogorodakh-a-takzhe-o-vliyanii-takikh-proektov-na-ekonomiku/</a></li>
+                        <li><a href="https://bigenc.ru/c/takticheskii-urbanizm-2-b2952d/versions"><span class="accent">2.</span> https://bigenc.ru/c/takticheskii-urbanizm-2-b2952d/versions</a></li>
+                        <li><a href="https://ardexpert.ru/article/23743"><span class="accent">3.</span> https://ardexpert.ru/article/23743</a></li>
+                        <li><a href="https://urbandesignlab.in/tactical-urbanism-turning-streets-into-social-spaces/"><span class="accent">4.</span> https://urbandesignlab.in/tactical-urbanism-turning-streets-into-social-spaces/</a></li>
+                        <li><a href="https://electrek.co/2022/10/13/tactical-urbanism-pop-up-covid-19-bike-lanes-increased-biking-reduced-nox-exposure/"><span class="accent">5.</span> https://electrek.co/2022/10/13/tactical-urbanism-pop-up-covid-19-bike-lanes-increased-biking-reduced-nox-exposure/ </a></li>
+                        <li><a href="https://www.academia.edu/83268221/Tactical_Urbanism"><span class="accent">6.</span> https://www.academia.edu/83268221/Tactical_Urbanism</a></li>
+                        <li><a href="https://urbanland.uli.org/infrastructure-transit/battle-new-times-square"><span class="accent">7.</span> https://urbanland.uli.org/infrastructure-transit/battle-new-times-square</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Tactical_urbanism"><span class="accent">8.</span> https://en.wikipedia.org/wiki/Tactical_urbanism</a></li>
+                        <li><a href="https://www.itdp.org"><span class="accent">9.</span> https://www.itdp.org</a></li>
+                        <li><a href="https://parkingday.org"><span class="accent">10.</span> https://parkingday.org</a></li>
+                    </ul>
+                    <img src="img/tree.png" alt="иконка дерева">
+                </div>
+            </div>
+        </section>
+
+        <section id="share--form">
+            <div class="container">
+                <h2 class="title">Преображаем город <span class="accent">вместе</span></h2>
+                <p class="share--text">Расскажите о своей идеи или поделитесь проектом, который реализовали в вашем городе</p>
+                <form action="" method="">
+                    <label for="desc">Описание</label>
+                    <textarea name="desc" id="desc"></textarea>
+                    <div class="wrap-inputs">
+                        <div class="item-input">
+                            <label for="city">Город</label>
+                            <input type="text" id="city">
+                        </div>
+                        <div class="item-input">
+                            <label for="year">Год реализации</label>
+                            <input type="text" id="year" pattern="[0-9]+$">
+                        </div>
+                    </div>
+                    <label for="file">Файл</label>
+                    <input type="file" id="file" accept="image/*" style="font-family: Advent Pro">
+                    <input type="submit" name="" id="btn--submit">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container--footer">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.svg" alt="логотип"></a>
+                <p class="logo-text">ТАКТИЧЕСКИЙ УРБАНИЗМ</p>
+            </div>
+            <nav class="footer--nav">
+                <h3 class="footer--title">Навигация</h3>
+                <ul class="menu--footer">
+                    <li><a class="link" href="history.html">История</a></li>
+                    <li><a class="link" href="works.html">Проекты</a></li>
+                    <li><a class="link" href="articles.html">Статьи</a></li>
+                </ul>
+            </nav>
+            <div class="contact">
+                <h3 class="footer--title">Контакты</h3>
+                <div class="info">
+                    <p class="address">г. Пенза, ул. Московская 1</p>
+                    <a href="tel:+7 (985) 356-70-84">+7 (985) 356-70-84</a>
+                    <a href="mailto:info@tacticurban">info@tacticurban</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
