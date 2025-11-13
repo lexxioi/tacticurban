@@ -190,6 +190,9 @@ header {
     gap: 50px;
 }
 
+.item--works img {
+        width: 100%;
+    }
 .item--works {
     display: flex;
     justify-content: space-between;
@@ -217,6 +220,7 @@ header {
     justify-content: center;
     grid-template-columns: 433px 433px;
     gap: 30px 20px;
+    flex-wrap: wrap;
 }
 
 .item--grid {
@@ -234,6 +238,7 @@ header {
     font-size: 26px;
     font-weight: 500;
     padding-top: 10px;
+    text-align: center;
 }
 
 .text--item {
@@ -619,7 +624,8 @@ color: var(--white);
 
 .item--world, .item--russia {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 100px;
     align-items: center;
 }
 
@@ -812,9 +818,26 @@ margin-bottom: 50px;
     header {
         padding: 0 20px;
     }
-    
+    .grid {
+        gap: 10px;
+        grid-template-columns: 1fr;
+    }
+   
     .menu li:nth-child(-n+3) {
         margin-right: 30px;
+    }
+    .item--works {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .item--works:last-child {
+        flex-direction: column-reverse;
+    }
+
+    .text--works {
+        text-align: center;
     }
 }
 
@@ -846,9 +869,7 @@ margin-bottom: 50px;
         gap: 20px;
     }
     
-    .grid {
-        grid-template-columns: 1fr;
-    }
+    
     
     form {
         width: 100%;
@@ -867,6 +888,9 @@ margin-bottom: 50px;
         flex-direction: column;
         gap: 30px;
         text-align: center;
+    }
+    .sidebar {
+        display: none;
     }
 }
 
@@ -893,10 +917,56 @@ margin-bottom: 50px;
     .text--about {
         font-size: 20px;
     }
-    .text--about img {
-        width: 70%;
-    }
+    
     .container--footer {
         flex-wrap: wrap;
+    }
+
+    .contact {
+        text-align: center;
+    }
+    .btn--work {
+    width: 250px;
+}
+
+.btn--work a {
+    font-size: 18px;
+
+}
+
+}
+
+.block--about img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .block--about {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .block--about img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .text--about {
+        font-size: 20px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .block--about {
+        gap: 20px;
+    }
+    
+    .block--about img {
+        max-width: 100%;
     }
 }
