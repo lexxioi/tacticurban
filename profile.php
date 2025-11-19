@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,19 +10,27 @@
     <link rel="icon" href="img/logo.svg">
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="logo--header">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="img/logo.svg" alt="логотип тактического урбанизма">
             </a>
         </div>
         <nav>
             <ul class="menu">
-                <li><a class="link" href="history.html">История</a></li>
-                <li><a class="link" href="works.html">Проекты</a></li>
-                <li><a class="link" href="articles.html">Статьи</a></li>
-                <li><a class="btn--share" href="index.html#share--form">Поделиться</a></li>
-                <li><a class="user-icon" href="register.html"><img src="img/icon_user.svg" alt="иконка пользователя"></a></li>
+                <li><a class="link" href="history.php">История</a></li>
+                <li><a class="link" href="works.php">Проекты</a></li>
+                <li><a class="link" href="articles.php">Статьи</a></li>
+                <?php if(isset($_SESSION['auth']) && $_SESSION['auth'] == true) {  ?>
+                <li><a class="link link--auth" href="profile.php">Профиль</a></li>
+                <li><a class="link link--auth--last" href="myarticles.php">Мои статьи</a></li>
+                <?php } ?>
+                <li><a class="btn--share" href="works.php#share--form">Поделиться</a></li>
+                <?php if(isset($_SESSION['auth']) && $_SESSION['auth'] == true) { ?>
+                <li><a class="user-icon" href="logout.php"><img src="img/solar_logout-outline.svg" alt="иконка выхода" title="Выйти"></a></li>
+                <?php } else {?>
+                <li><a class="user-icon" href="register.php"><img src="img/icon_user.svg" alt="иконка пользователя" title="Зарегистрироваться"></a></li>
+                <?php } ?>
             </ul>
         </nav>
 
@@ -32,11 +42,11 @@
 
         <div class="mobile-menu" id="mobileMenu">
             <nav class="mobile-nav">
-                <li><a href="history.html">История</a></li>
-                <li><a href="works.html">Проекты</a></li>
-                <li><a href="articles.html">Статьи</a></li>
-                <li><a class="btn--share-mobile" href="index.html#share--form">Поделиться</a></li>
-                <li><a href="register.html">Личный кабинет</a></li>
+                <li><a href="history.php">История</a></li>
+                <li><a href="works.php">Проекты</a></li>
+                <li><a href="articles.php">Статьи</a></li>
+                <li><a class="btn--share-mobile" href="#share--form">Поделиться</a></li>
+                <li><a href="register.php">Личный кабинет</a></li>
             </nav>
         </div>
     </header>
@@ -76,30 +86,4 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container--footer">
-            <div class="logo">
-                <a href="#header"><img src="img/logo.svg" alt="логотип"></a>
-                <p class="logo-text">ТАКТИЧЕСКИЙ УРБАНИЗМ</p>
-            </div>
-            <nav class="footer--nav">
-                <h3 class="footer--title">Навигация</h3>
-                <ul class="menu--footer">
-                    <li><a class="link" href="history.html">История</a></li>
-                    <li><a class="link" href="works.html">Проекты</a></li>
-                    <li><a class="link" href="articles.html">Статьи</a></li>
-                </ul>
-            </nav>
-            <div class="contact">
-                <h3 class="footer--title">Контакты</h3>
-                <div class="info">
-                    <p class="address">г. Пенза, ул. Московская 1</p>
-                    <a href="tel:+7 (985) 356-70-84">+7 (985) 356-70-84</a>
-                    <a href="mailto:info@tacticurban">info@tacticurban</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="js/script.js"></script>    
-</body>
-</html>
+    <?php include_once "includes/footer.php"?>

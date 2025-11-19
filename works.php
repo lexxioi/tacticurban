@@ -1,45 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ТактикУрбан</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/logo.svg">
-</head>
-<body>
-    <header>
-        <div class="logo--header">
-            <a href="index.html">
-                <img src="img/logo.svg" alt="логотип тактического урбанизма">
-            </a>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a class="link" href="history.html">История</a></li>
-                <li><a class="link" href="works.html">Проекты</a></li>
-                <li><a class="link" href="articles.html">Статьи</a></li>
-                <li><a class="btn--share" href="#share--form">Поделиться</a></li>
-                <li><a class="user-icon" href="register.html"><img src="img/icon_user.svg" alt="иконка пользователя"></a></li>
-            </ul>
-        </nav>
-
-        <div class="burger" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <div class="mobile-menu" id="mobileMenu">
-            <nav class="mobile-nav">
-                <li><a href="history.html">История</a></li>
-                <li><a href="works.html">Проекты</a></li>
-                <li><a href="articles.html">Статьи</a></li>
-                <li><a class="btn--share-mobile" href="#share--form">Поделиться</a></li>
-                <li><a href="register.html">Личный кабинет</a></li>
-            </nav>
-        </div>
-    </header>
+<?php include_once "includes/header.php"?>
     <main>
 
         
@@ -123,54 +82,5 @@
                 </div>
             </div>
         </section>
-        <section id="share--form">
-            <div class="container">
-                <h2 class="title">Преображаем город <span class="accent">вместе</span></h2>
-                <p class="share--text">Расскажите о своей идеи или поделитесь проектом, который реализовали в вашем городе</p>
-                <form action="" method="">
-                    <label for="desc">Описание</label>
-                    <textarea name="desc" id="desc"></textarea>
-                    <div class="wrap-inputs">
-                        <div class="item-input">
-                            <label for="city">Город</label>
-                            <input type="text" id="city">
-                        </div>
-                        <div class="item-input">
-                            <label for="year">Год реализации</label>
-                            <input type="text" id="year" pattern="[0-9]+$">
-                        </div>
-                    </div>
-                    <label for="file">Файл</label>
-                    <input type="file" id="file" accept="image/*" style="font-family: Advent Pro">
-                    <input type="submit" name="" id="btn--submit">
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container--footer">
-            <div class="logo">
-                <a href="#header"><img src="img/logo.svg" alt="логотип"></a>
-                <p class="logo-text">ТАКТИЧЕСКИЙ УРБАНИЗМ</p>
-            </div>
-            <nav class="footer--nav">
-                <h3 class="footer--title">Навигация</h3>
-                <ul class="menu--footer">
-                    <li><a class="link" href="history.html">История</a></li>
-                    <li><a class="link" href="works.html">Проекты</a></li>
-                    <li><a class="link" href="articles.html">Статьи</a></li>
-                </ul>
-            </nav>
-            <div class="contact">
-                <h3 class="footer--title">Контакты</h3>
-                <div class="info">
-                    <p class="address">г. Пенза, ул. Московская 1</p>
-                    <a href="tel:+7 (985) 356-70-84">+7 (985) 356-70-84</a>
-                    <a href="mailto:info@tacticurban">info@tacticurban</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="js/script.js"></script>
-</body>
-</html>
+<?php include_once "includes/add_posts.php"?>        
+<?php include_once "includes/footer.php"?>
